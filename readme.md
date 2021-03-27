@@ -1,1 +1,0 @@
-Các idol dạy em !!!
