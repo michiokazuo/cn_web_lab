@@ -3,5 +3,5 @@
 # Môi trường: `Window 10 `
 # Server: `Apache2.4`
 # Database: `MySQL`
-# Database `Manager: PHPMyAdmin`
+# Database Manager: `PHPMyAdmin`
 # Tools: `XAMPP`
