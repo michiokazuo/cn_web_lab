@@ -1,3 +1,5 @@
 # cn_web_lab
-Đây là các bài tập hàng tuần do nhóm HTTP làm, mong các bạn chấm nhẹ tay.
-Thanks!!!
+## Phần nộp bài của Nguyễn Minh Tuấn
+1.2 + 1.3: ConditionalTest.html + ConditionalTest.php
+1.4: SquareCube.php + Square_Cube.php
+1.5: DateTime.php
