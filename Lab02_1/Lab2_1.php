@@ -13,13 +13,23 @@
         $gender = $_POST["gender"];
         $hobbies = $_POST["hobbies"];
 
-        print "Your name is $firstName $lastName <br>";
+        if ($firstName != "" || $lastName != "")
+            print "Your name is $firstName $lastName <br>";
+        
         print "Gender: $gender <br>";
-        print "Learn in class $class at $university <br>";
-        print "Hobbies are: ";
 
-        foreach($hobbies as $hobby) {
-            print " $hobby, ";
+        if ($class != "") {
+            if ($university != "")
+                print "Learn in class $class at $university <br>";
+            else print "Learn in class $class";
+        } else if ($university != "") print "Learn at $university <br>";
+        
+        if (count($hobbies) != 1 && $hobbies[0] != "") {
+            print "Hobbies are: ";
+
+            foreach($hobbies as $hobby) {
+                print " $hobby, ";
+            }
         }
     ?>
 </body>
