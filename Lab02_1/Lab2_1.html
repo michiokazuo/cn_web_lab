@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <title>Expression Example</title>
     <style>
@@ -7,14 +9,29 @@
             padding-left: 10px;
         }
     </style>
+    
+    <script>
+        function nonEmpty() {
+            console.log("OK");
+            var firstName = document.forms["profile"]["firstName"].value;
+            var gender = document.forms["profile"]["gender"].value;
+            var class1 = document.forms["profile"]["class"].value;
+            var university = document.forms["profile"]["university"].value;
+
+            if (firstName == "" || gender == "" || class1 == "" || university == "") {
+                alert("Do not leave the field blank");
+                return false; 
+            }
+        }
+    </script>
 </head>
 <body>
     
     <h3>Student Profile Report</h3>
-    <form action="Lab2_1.php" method="POST">
+    <form name="profile" action="Lab2_1.php" method="POST" onsubmit="return nonEmpty()">
         <div>
             <p>
-                First name: <input type="text" size="16" maxLength="20" name="firstName"> 
+                First name: <input type="text" size="16" maxLength="20" name="firstName" id="firstName"> 
                 Last name: <input type="text" size="16" maxLength="20" name="lastName">
             </p> 
         </div>
