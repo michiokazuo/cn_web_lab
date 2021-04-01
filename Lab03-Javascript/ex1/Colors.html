@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colors</title>
+        <style>
+            a {
+              text-decoration: none;  
+            }
+        </style>
+        <script>
+            function handleMouseOver(obj){
+                let color = obj.innerHTML.toLowerCase()
+                document.getElementById("para").style.color = color
+            }
+
+            function handleMouseOut(){
+                document.getElementById("para").style.color = "black"
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut()" style="color: red;">RED</a>
+        <a href="#" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut()" style="color: green;">GREEN</a>
+        <a href="#" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut()" style="color: blue;">BLUE</a>
+        <p id ="para">
+            Write a simple HTML document called colors.html containing three colored links at the top of the page labeled RED, GREEN, and BLUE. Under the links there should be a small paragraph of text (you make this up) with a starting color of BLACK. Using onMouseOver and onMouseOut events of the links, when a user rolls over the each and any of the color labeled links, the color of the text in the paragraph below should change to the color corresponding to the link the user is hovering over. When the user rolls off the link, the color of the text should go back to it's starting color of BLACK. 
+        </p>
+    </body>
+</html>

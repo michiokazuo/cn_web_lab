@@ -1,0 +1,36 @@
+<!-- CÁC BẠN HÃY CHẠY FILE NÀY BẰNG APACHE VÌ CÁC BROWSER SẼ CẤM VIỆC TRUY CẬP VÀO THẺ IFRAME VÌ LÝ DO BẢO MẬT-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <iframe src="left.html" frameborder="0" id="left"></iframe>
+    <iframe src="right.html" frameborder="0" id="right"></iframe>
+</body>
+<script>
+    parent.left.onload = function () {
+        let left = parent.left.contentDocument
+        left.getElementById('blog').innerHTML = document.cookie
+    }
+
+    parent.right.onload = function (){
+        let right = parent.right.contentDocument
+        right.getElementById('button').onclick = addBlog
+    }
+
+    
+    function addBlog() {
+        let cookie = parent.right.contentDocument.getElementById('blog').value
+        let expires = new Date();
+        expires.setDate(expires.getDate() + 1);     
+        document.cookie = `${cookie}; expires = ${expires}`
+        location.reload();
+    }
+</script>
+
+</html>

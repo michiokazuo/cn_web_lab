@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <style>
+            label{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="GET">
+            <label for="username">Username:</label> <br>
+            <input type = "text" id = "username" size="30" pattern="[a-zA-Z]+" required placeholder="Username"
+            title="không có số trong username"><br>
+            <label for="email">Email:</label> <br>
+            <input type="text" id = "email" pattern="[^@]+@[^@]+" required size="30" title = "Email không đúng định dạng"> <br>
+            <label for="telephone">Telephone</label> <br>
+            <input type="tel" name="" id="telephone" required pattern="^0\d{9}" title = "Có 10 kí tự số và bắt đầu bằng số 0" size = '30'> <br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
