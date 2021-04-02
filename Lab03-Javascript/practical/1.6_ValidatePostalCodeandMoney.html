@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validate PostalCode and Money</title>
+    <style>
+        label {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function funcCode() {
+            let s = document.getElementById("code").value
+            let check = /[A-Z][0-9]{3,3}/;
+            if (check.test(s)) {
+                alert("Validate code")
+                return true;
+            }
+            else {
+                alert("Invalidate code")
+                return false;
+            }
+        }
+        function funcMoney() {
+            let s = document.getElementById("money").value
+            let check = /[0-9]*[\.][0-9][0-9]/;
+            if (check.test(s)) {
+                alert("Validate money")
+                return true;
+            }
+            else {
+                alert("Invalidate money")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" id="form">
+        <label for="code">Code:</label><br>
+        <input type="text" id="code">
+        <input type="button" onclick="funcCode()" value="Check">
+        <br>
+        <label for="money">Money:</label> <br>
+        <input type="text" name="" id="money">
+        <input type="button" onclick="funcMoney()" value="Check">
+        <br>
+    </form>
+</body>
+
+</html>

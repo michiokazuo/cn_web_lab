@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Text Field</title>
+    </head>
+    <body>
+        <form action="#" id ="form">
+            <input name="num_1" value="I'am box #1"> 
+        </form>
+        <a href="#" onclick="add()">ADD</a>
+    </body>
+    <script>
+        let form = document.getElementById("form")
+        console.log(form)
+        let cnt = 1;
+        function add(){
+            let input = document.createElement("input");
+            input.setAttribute("name", `num_${cnt}`);
+            input.setAttribute("value", `I'am box #${cnt}`)
+            form.appendChild(input)
+            cnt++
+        }
+    </script>
+</html>

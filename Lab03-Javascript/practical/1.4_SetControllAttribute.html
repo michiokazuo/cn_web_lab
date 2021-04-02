@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Controll Attribute</title>
+        <script>
+            function func(align){
+                let p = document.getElementById('p')
+                p.setAttribute("align", align)
+            }
+        </script>
+    </head>
+    <body>
+        <form name ="form">
+            <select name="" id="select">
+                <option>-- align --</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+                <option value="center">center</option>
+            </select>
+            <input type="button" value="GO" onclick="func(document.getElementById('select').value)">
+        </form>
+        <p id = "p">This is a sample text</p>
+
+    </body>
+</html>
