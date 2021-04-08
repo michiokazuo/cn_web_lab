@@ -7,17 +7,53 @@
                 cursor: pointer;
             }
         </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
     </head>
     <body>
-        <form action="" method="GET">
-            <label for="username">Username:</label> <br>
-            <input type = "text" id = "username" size="30" pattern="[a-zA-Z]+" required placeholder="Username"
-            title="không có số trong username"><br>
+        <form action="" method="GET" onsubmit="event.preventDefault()">
+            <label for="username">First name:</label> <br>
+            <input type = "text" id = "firstname" size="30" placeholder="First name"
+            ><br>
+            <label for="username">Last name:</label> <br>
+            <input type = "text" id = "lastname" size="30" placeholder="Last name"
+            ><br>
             <label for="email">Email:</label> <br>
-            <input type="text" id = "email" pattern="[^@]+@[^@]+" required size="30" title = "Email không đúng định dạng"> <br>
-            <label for="telephone">Telephone</label> <br>
-            <input type="tel" name="" id="telephone" required pattern="^0\d{9}" title = "Có 10 kí tự số và bắt đầu bằng số 0" size = '30'> <br>
-            <input type="submit" value="submit">
+            <input type="text" id = "email"  placeholder="Email" size="30" > <br>
+            <label for="telephone">Telephone:</label> <br>
+            <input type="text" name="" id="telephone" placeholder="Telephone"  size = '30'> <br> <br>
+            <input type="submit" value="submit" onclick="check()">
         </form>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+        <script>
+            function check(){
+                let check_lastname = new RegExp('^[A-Z][a-z]+').test(document.getElementById('lastname').value)
+                let check_email = new RegExp('[^@]+@[^@]+').test(document.getElementById('email').value)
+                let check_telephone = new RegExp('^0[0-9]{9}$').test(document.getElementById('telephone').value)
+                let check_firstname = new RegExp('^[A-Z][a-z]+').test(document.getElementById('firstname').value)
+
+                if(!check_firstname ) {
+                    toastr.warning('Vui lòng viết hoa chữ cái đầu của Firstname')
+                }
+
+                if(! check_lastname) {
+                    toastr.warning('Vui lòng viết hoa chữ cái đầu của Lastname')
+                }
+
+                if(! check_email) {
+                    toastr.warning('Vui lòng viết đúng định dạng Email')
+                }
+
+                if(! check_telephone) {
+                    toastr.warning('Telephone bắt đầu bằng chữ số 0 và có 10 ký tự')
+                }
+
+                if(check_firstname && check_lastname && check_email && check_telephone){
+                    toastr.success('Đã đúng định dạng')
+                    
+                }
+
+            }
+        </script>
     </body>
 </html>
