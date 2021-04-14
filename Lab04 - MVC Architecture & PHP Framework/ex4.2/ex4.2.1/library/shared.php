@@ -77,7 +77,7 @@ function callHook()
 
 /** Autoload any classes that are required **/
 
-function __autoload($className)
+function autoload($className)
 {
     if (file_exists(ROOT . DS . 'library' . DS . strtolower($className) . '.class.php')) {
         require_once(ROOT . DS . 'library' . DS . strtolower($className) . '.class.php');
@@ -89,7 +89,7 @@ function __autoload($className)
         /* Error Generation Code Here */
     }
 }
-
+spl_autoload_register('autoload');
 setReporting();
 removeMagicQuotes();
 unregisterGlobals();
