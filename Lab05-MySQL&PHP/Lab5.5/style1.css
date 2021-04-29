@@ -1,0 +1,7 @@
+th {
+  background-color: gray;
+}
+
+table, th, td {
+  text-align: center;
+}
