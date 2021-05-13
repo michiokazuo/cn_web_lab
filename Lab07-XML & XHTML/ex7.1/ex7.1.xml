@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--student.xml-->
+<student>
+    <name>Phong Dong</name>
+    <ID>20183988</ID>
+    <email> phong.dx183966@sis.hust.edu.vn </email>
+    <phone> 4940001 </phone>
+    <birthday>2000/01/02</birthday>
+    <address>HBT/HN/VN</address>
+    <school>HUST</school>
+    <branch>IT3</branch>
+    <class>IT3-01</class>
+    <level>3</level>
+    <cpa>4.0</cpa>
+</student>
