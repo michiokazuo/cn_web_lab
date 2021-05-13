@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml_application>
+    <name>EPUB</name>
+    <some_information>
+        <domain>
+            public domain and open licensed content include Project Gutenberg, 
+            PubMed Central, SciELO and others.
+        </domain>
+        <purpose>
+            file format that uses the ".epub" file extension
+        </purpose>
+        <function>
+            The EPUB format is implemented as an archive file consisting of XHTML files carrying the content, along with images and other supporting files. EPUB is the most widely supported vendor-independent XML-based (as opposed to PDF) e-book format; that is, it is supported by almost all hardware readers, except for Kindle.
+        </function>
+        <standard_define_organization>IDPF, W3C, ISO</standard_define_organization>
+    </some_information>
+    
+    <some_elements>
+        <element>
+            <name>metadata</name>
+            <function>contains all the metadata information for a particular EPUB file</function>
+            <attributes>
+                <attribute>
+                    <name>title</name>
+                    <function>contains the title of the book</function>
+                </attribute>
+                <attribute>
+                    <name>language</name>
+                    <function>contains the language of the book's contents</function>
+                </attribute>
+                <attribute>
+                    <name>identifier</name>
+                    <function>contains a unique identifier for the book</function>
+                </attribute>
+            </attributes>
+        </element>
+        <element>
+            <name>manifest</name>
+            <function>lists all the files contained in the package</function>
+            <attributes>
+                <attribute>
+                    <name>id</name>
+                </attribute>
+                <attribute>
+                    <name>href</name>
+                </attribute>
+                <attribute>
+                    <name>media-type</name>
+                </attribute>
+            </attributes>
+        </element>
+        <element>
+            <name>spine</name>
+            <function>lists all the XHTML content documents in their linear reading order</function>
+            <attributes>
+                <attribute>
+                    <name>toc</name>
+                </attribute>
+            </attributes>
+        </element>
+        <element>
+            <name>guide</name>
+            <function>an optional element for the purpose of identifying fundamental structural components of the book</function>
+            <attributes>
+                <attribute>
+                    <name>type</name>
+                </attribute>
+                <attribute>
+                    <name>title</name>
+                </attribute>
+                <attribute>
+                    <name>href</name>
+                </attribute>
+            </attributes>
+        </element>
+    </some_elements>
+    <description_short>
+        <content>Accessible EPUB 3: Strategies for creating EPUB 3 content that can be read by people with different preferred reading modalities.</content>
+        <comments>
+            <comment>If you are still confused about why you should spend time and energy creating accessible ebooks, I refer you use Accessible EPUB 3</comment>
+        </comments>
+    </description_short>
+</xml_application>
